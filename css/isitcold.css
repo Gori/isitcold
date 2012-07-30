@@ -1,0 +1,147 @@
+@font-face {
+    font-family:'ClimaconsRegular';
+    src: url('fonts/climacons-webfont.eot');
+    src: url('fonts/climacons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/climacons-webfont.woff') format('woff'),
+         url('fonts/climacons-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: arno-pro-1,arno-pro-2, serif; 
+	font-size:21px;
+	background: rgb(128,128,128);
+	color: #000000;
+	margin: 0px 0px 0px 0px;
+}
+
+#main {
+	width: 100%;
+	height: 340px;
+	position: absolute;
+	top: 50%;
+	margin-top: -170px;
+	//background: rgba(255,0,0,0.4);
+}
+
+#mainholder {
+	position: relative;
+}
+
+.headline {
+	text-align:center;
+	margin-bottom:30px;alignment-adjust: 
+    margin-top:0px; font-size:120px;
+    padding-bottom: 11px;
+    color:#ffffff;
+    font-family: domus-titling-web-1,domus-titling-web-2, sans-serif;
+    font-weight:bold; line-height:80%;
+    
+    position:relative;
+}
+
+#starttext {
+	position: absolute;
+	width: 100%;
+	//top: -14px;
+	z-index: 100;
+}
+
+#sharetext {
+	margin-top: 14px;
+	opacity: 0;
+}
+
+#headline {
+	opacity: 0;
+	z-index: 120;
+	top: 40px;
+}
+
+.textline {
+	text-align:center;
+	position:relative;
+	width: 700px;
+	text-align: center;
+	color: #000000; 
+	margin: 0 auto;
+}
+
+#infotext {
+	opacity: 0;
+}
+
+.textmin {
+	color: #c0c0c0;
+}
+
+#icontext {
+	font-family: ClimaconsRegular;
+	text-align: center;
+	font-size: 630px;
+	color: #000000;
+	position: fixed;
+	z-index: 0;
+	width: 618px;
+	height: 634px;
+	left: 50%;
+	top: 50%;
+	margin-left: -309px;
+	margin-top: -347px;
+	opacity: 0;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	//background: rgba(100,0,100,0.8);
+}
+
+#iconholder {
+	position: relative;
+}
+
+.footer {
+	width: 400px;
+	text-align: center;
+	font-size: 12px;
+	position: fixed;
+	left: 50%;
+	margin-left: -200px;
+	height: 110px;
+	bottom: 6px;
+}
+
+#tempswitch {
+	cursor: pointer;
+}
+
+#tempswitch:hover {
+	color: rgba(255,255,255,0.8);
+}
+
+#dayswitch {
+	cursor: pointer;
+}
+
+#dayswitch:hover {
+	color: rgba(0,0,0,0.6);
+}
+
+a {
+	color: rgba(0,0,0,0.6);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(0,0,0,0.8);
+	text-decoration: underline;
+}
+
+@font-face {
+    font-family:'ClimaconsRegular';
+    src: url('/fonts/climacons-webfont.eot');
+    src: url('/fonts/climacons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/climacons-webfont.woff') format('woff'),
+         url('/fonts/climacons-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
