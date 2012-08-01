@@ -41,6 +41,11 @@ body {
     position:relative;
 }
 
+#startinfotext {
+	margin-bottom: -10px;
+	opacity: 0;
+}
+
 #starttext {
 	position: absolute;
 	width: 100%;

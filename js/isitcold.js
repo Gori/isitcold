@@ -19,6 +19,7 @@
 	var longitude = 0;
 	var latitude = 0;
 	var tempLine = "";
+	var startinfo = "";
 	var shareMessage = "";
 	var shareIcon = "";
 	var currentCol = {r:128, g:128, b:128};
@@ -195,6 +196,7 @@
 		var currObj;
 		if (isCurrent) {
 			currObj = currentWeather;
+			startinfo = "Well, the current weather in " + city + ", " + country + " is:";
 			if (isCelsius)  {
 				temperature = "<span id='tempswitch'>" + currObj.celsius + "&deg;C</span> " + currObj.condition;
 				shareMessage = "Current weather in " + city + ", " + country + " is " + currObj.celsius + "&deg;C and " + currObj.condition.toLowerCase() + ".";
@@ -202,11 +204,12 @@
 				temperature = "<span id='tempswitch'>" + currObj.fahrenheit + "&deg;F</span> " + currObj.condition;
 				shareMessage = "Current weather in " + city + ", " + country + " is " + currObj.fahrenheit + "&deg;F and " + currObj.condition.toLowerCase() + ".";
 			}
-			description = "<span id='dayswitch'>Current weather in " + city + ", " + country + ".</span>";
+			description = "<span id='dayswitch'>See today's forecast.</span>";
 			condition = currObj.condition;
 			celsius = currObj.celsius;
 		} else {
 			currObj = forecastWeather;
+			startinfo = "Well, today's forecast for " + city + ", " + country + " is:";
 			if (isCelsius)  {
 				temperature = "<span id='tempswitch'>" + currObj.lowC + "-" + currObj.highC + "&deg;C</span> " + currObj.condition;
 				shareMessage = "Todays forecast for " + city + ", " + country + " is " + currObj.lowC + "-" + currObj.highC + "&deg;C and " + currObj.condition.toLowerCase() + ".";
@@ -214,7 +217,7 @@
 				temperature = "<span id='tempswitch'>" + currObj.lowF + "-" + currObj.highF + "&deg;F</span> " + currObj.condition;
 				shareMessage = "Todays forecast for " + city + ", " + country + " is " + currObj.lowF + "-" + currObj.highF + "&deg;C and " + currObj.condition.toLowerCase() + ".";
 			}
-			description = "<span id='dayswitch'>Todays forecast for " + city + ", " + country + ".</span>";
+			description = "<span id='dayswitch'>See current weather conditions.</span>";
 			
 			condition = currObj.condition;
 			celsius = (currObj.lowC + currObj.highC) / 2;
@@ -284,6 +287,7 @@
 		$("#iconholder").css("margin-left", iconX);
 		$("#iconholder").css("margin-top", iconY);
 
+		$("#startinfotext").html(startinfo);
 		$("#headline").html(temperature);
 		$("#infotext").html(description);
 		$("#iconholder").html(iconText);
@@ -297,6 +301,7 @@
 		//$("#sharetext").html(shareString);
 
 		$('#tempswitch').bind('click', {}, switchTemp);
+		$('#dayswitch').bind('click', {}, switchDay);
 
 		$('#faceshare').bind('click', {site:"facebook"}, sharePage);
 		$('#twittershare').bind('click', {site:"twitter"}, sharePage);
@@ -351,6 +356,7 @@
 		TweenLite.to($("#headline"), 1.5, {css:{opacity:1, top:0}, ease:Power2.easeOut});
 		TweenLite.to($("#icontext"), 8, {css:{opacity:0.15, scaleX:1.2, scaleY:1.2}, ease:Power1.easeOut});
 		TweenLite.to($("#infotext"), 2, {css:{opacity:1}, delay:0.6, ease:Power2.easeOut});
+		TweenLite.to($("#startinfotext"), 2, {css:{opacity:1}, delay:0.6, ease:Power2.easeOut});
 		TweenLite.to($("#sharetext"), 2, {css:{opacity:1}, delay:0.9, ease:Power2.easeOut});
 	};
 
