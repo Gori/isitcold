@@ -317,7 +317,7 @@
 
 		if (sharer == "facebook") {
 			var fName = encodeURIComponent(shareName);
-			var fCaption = encodeURIComponent(shareName);
+			var fCaption = encodeURIComponent(city + ", " + country);
 			var fDescription = encodeURIComponent(shareTitle);
 			//window.open("https://www.facebook.com/sharer/sharer.php?u=" + shareURL + "&t=" + shareTitle,"_blank");
 			var facebookShare = "https://www.facebook.com/dialog/feed?app_id=427587953959665&link=" + shareURL + "&picture=" + shareImage + "&name=" + fName + "&caption=" + fCaption + "&description=" + fDescription + "&redirect_uri=http://www.isitcold.com";
@@ -355,9 +355,9 @@
 		TweenLite.to($("#starttext"), 1.5, {css:{autoAlpha:0, top:-40}, ease:Power2.easeOut});
 		TweenLite.to($("#headline"), 1.5, {css:{opacity:1, top:0}, ease:Power2.easeOut});
 		TweenLite.to($("#icontext"), 8, {css:{opacity:0.15, scaleX:1.2, scaleY:1.2}, ease:Power1.easeOut});
-		TweenLite.to($("#infotext"), 2, {css:{opacity:1}, delay:0.6, ease:Power2.easeOut});
+		TweenLite.to($("#infotext"), 1, {css:{opacity:1}, delay:1.3, ease:Power2.easeOut});
 		TweenLite.to($("#startinfotext"), 2, {css:{opacity:1}, delay:0.6, ease:Power2.easeOut});
-		TweenLite.to($("#sharetext"), 2, {css:{opacity:1}, delay:0.9, ease:Power2.easeOut});
+		TweenLite.to($("#sharetext"), 1, {css:{opacity:1}, delay:2.2, ease:Power2.easeOut});
 	};
 
 	var colorUpdate = function() {
