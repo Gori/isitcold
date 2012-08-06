@@ -148,6 +148,11 @@ body {
 	bottom: 6px;
 }
 
+.footer .social .fb-like {
+	position: relative;
+	top: -4px;
+}
+
 #tempswitch {
 	cursor: pointer;
 }
